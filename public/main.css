@@ -226,10 +226,7 @@
     height: 446px;
     position: relative;
     overflow: visible;
-    /* background: url("./author/images/your-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
+   
 }
 
 .mid-frame .main-menu .img::before{
@@ -380,7 +377,7 @@
     white-space: nowrap;
 }
 
-/* Uchburchak */
+/* Triangle */
 .tooltip::after{
     content: "";
     position: absolute;
