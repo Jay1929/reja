@@ -44,12 +44,12 @@ app.post("/create-item", (req, res) => {
 app.get("/author", (req, res) => {
   res.render("author", {user: user}); 
 }); 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { 
   res.redirect("/author");
 });
 
 app.get("/", function (req, res) {
-  res.render("harid");
+  res.render("harid"); 
 });
 
 const server = http.createServer(app);
