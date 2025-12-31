@@ -1,15 +1,32 @@
-// MI Task : TASK-A
-function countLetter(word, letter) {
+// MI TASK: TASK-B
+
+function countDigits(str) {
     let count = 0;
-    for (let i = 0; i < word.length; i++) {
-        if (word[i] === letter) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] >= 0 && str[i] <= 9) {
             count++;
         }
     }
+
     return count;
 }
-const result = countLetter("Assalomu alaykum", "a");
+
+const result = countDigits("646464tyhd66");
 console.log(result);
+
+// MI Task : TASK-A
+
+// function countLetter(word, letter) {
+//     let count = 0;
+//     for (let i = 0; i < word.length; i++) {
+//         if (word[i] === letter) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// const result = countLetter("Assalomu alaykum", "a");
+// console.log(result);
 // // CALLBACK 
 // console.log("Jack Ma maslahatlari");
 // const list = [
