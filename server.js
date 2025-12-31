@@ -2,7 +2,7 @@ const http = require("http");
 const mongodb = require("mongodb");
 
 let db;
-const connectString = "mongodb+srv://janob_Jay:6Y8oSwhZKx881AlL@cluster0.xfidt4d.mongodb.net/"
+const connectString = "mongodb+srv://janob_Jay:6Y8oSwhZKx881AlL@cluster0.xfidt4d.mongodb.net/Reja"
 
 mongodb.connect(
 connectString, 
