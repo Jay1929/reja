@@ -8,7 +8,6 @@ class Shop {
     }
     // Method
     sotish(mahsulot, amount) {
-        console.log(`Shopimizdan ${amount} ta ${mahsulot} sotildi`)
         if (mahsulot === "non") {
             this.non -= amount;
         } else if (mahsulot === "lagmon") {
@@ -16,11 +15,10 @@ class Shop {
         } else if(mahsulot === "cola") {
             this.cola -= amount;
         } else {
-            console.log(`Kechirasiz hurmatli mijoz bizda bu ${mahsulot} mavjud emas`);
+            console.log(`Kechirasiz hurmatli mijoz bizda  ${mahsulot} mavjud emas`);
         }
     }
     qabul(mahsulot, amount) {
-        console.log(`SHopimizga ${amount} ta ${mahsulot} qabul qilindi`);
         if (mahsulot === "non") {
             this.non += amount;
         } else if (mahsulot === "lagmon") {
@@ -28,7 +26,7 @@ class Shop {
         } else if (mahsulot === "cola") {
             this.cola += amount;
         } else {
-            console.log(`Bunday ${mahsulot} qabul qilinmaydi`);
+            console.log(`${mahsulot} qabul qilinmaydi`);
         }
     }
     qoldiq() {
@@ -36,12 +34,14 @@ class Shop {
         const hours = curTime.getHours();
         const minutes = curTime.getMinutes();
         const now = `${hours}:${minutes}`;
-        console.log(`Hozir ${now} da ${this.non} ta "non", ${this.lagmon} ta "lagmon" va ${this.cola} ta "cola" mavjud`);
+        console.log(`Hozir ${now} da ${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola mavjud`);
     }
 }
 const shop = new Shop(8, 7, 4) 
 shop.sotish("non", 4);
-shop.qabul("lagmon",3)
+shop.sotish("shashlik", 4);
+shop.qabul("lagmon",3);
+shop.qabul("Pepsi", 15);
 shop.qoldiq();
 
 
