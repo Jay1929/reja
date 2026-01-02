@@ -1,18 +1,65 @@
-// MI TASK: TASK-B
-
-function countDigits(str) {
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] >= 0 && str[i] <= 9) {
-            count++;
+// MI Task: TASK-C
+class Shop {
+    //Constructor
+    constructor(nonMiqdori, lagmonMiqdori, colaMiqdori)  {
+        this.non = nonMiqdori;
+        this.lagmon = lagmonMiqdori;
+        this.cola = colaMiqdori;
+    }
+    // Method
+    sotish(mahsulot, amount) {
+        console.log(`Shopimizdan ${amount} ta ${mahsulot} sotildi`)
+        if (mahsulot === "non") {
+            this.non -= amount;
+        } else if (mahsulot === "lagmon") {
+            this.lagmon -= amount;
+        } else if(mahsulot === "cola") {
+            this.cola -= amount;
+        } else {
+            console.log(`Kechirasiz hurmatli mijoz bizda bu ${mahsulot} mavjud emas`);
         }
     }
-
-    return count;
+    qabul(mahsulot, amount) {
+        console.log(`SHopimizga ${amount} ta ${mahsulot} qabul qilindi`);
+        if (mahsulot === "non") {
+            this.non += amount;
+        } else if (mahsulot === "lagmon") {
+            this.lagmon += amount;
+        } else if (mahsulot === "cola") {
+            this.cola += amount;
+        } else {
+            console.log(`Bunday ${mahsulot} qabul qilinmaydi`);
+        }
+    }
+    qoldiq() {
+        const curTime = new Date();
+        const hours = curTime.getHours();
+        const minutes = curTime.getMinutes();
+        const now = `${hours}:${minutes}`;
+        console.log(`Hozir ${now} da ${this.non} ta "non", ${this.lagmon} ta "lagmon" va ${this.cola} ta "cola" mavjud`);
+    }
 }
+const shop = new Shop(8, 7, 4) 
+shop.sotish("non", 4);
+shop.qabul("lagmon",3)
+shop.qoldiq();
 
-const result = countDigits("646464tyhd66");
-console.log(result);
+
+// MI TASK: TASK-B
+
+// function countDigits(str) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] >= 0 && str[i] <= 9) {
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+
+// const result = countDigits("646464tyhd66");
+// console.log(result);
 
 // MI Task : TASK-A
 
