@@ -30,7 +30,7 @@ app.set("view engine", "ejs");
 
 // 4: Routing
 // app.get("/", function (req, res) {
-//   res.end(`<h1 style="background: red">HELLO WORLD by JAY</h1>`);
+//   res.end(<h1 style="background: red">HELLO WORLD by JAY</h1>);
 // });          
 
 // app.get("/hello", function (req, res) {
@@ -58,6 +58,24 @@ app.post("/delete-item", (req, res) => {
     res.json({ state: "succes"});
   })
 });
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    {_id: new mongodb.ObjectId(data.id) },
+    { $set: {reja: data.new_input} },
+    function(err, data) {
+    res.json({ state: "succes"});
+  })
+});
+
+app.post("/delete-all", (req, res) => {
+  if(req.body.delete_all) {
+    db.collection("plans").deleteMany(function() {
+      res.json({ state: "Hamma rejalar ochirildi" });
+    });
+  }
+});
 
 // app.get("/author", (req, res) => { 
 //   res.render("author", {user: user});  
@@ -70,7 +88,7 @@ app.get("/", function (req, res) {
   console.log('user entered /');
   db.collection("plans")
     .find()
-    .toArray((err, data) => {
+    .toArray((err, data) => { 
       if (err) {
         console.log(err);
         res.end("something went wrong"); 
@@ -82,4 +100,3 @@ app.get("/", function (req, res) {
 });   
   
 module.exports = app;
- 
