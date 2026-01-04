@@ -1,48 +1,61 @@
-// MI Task: TASK-C
-class Shop {
-    //Constructor
-    constructor(nonMiqdori, lagmonMiqdori, colaMiqdori)  {
-        this.non = nonMiqdori;
-        this.lagmon = lagmonMiqdori;
-        this.cola = colaMiqdori;
+//MI TASK: TASK-D
+function checkContent(word1, word2) {
+    if (word1.length !== word2.length) {
+        return false;
     }
-    // Method
-    sotish(mahsulot, amount) {
-        if (mahsulot === "non") {
-            this.non -= amount;
-        } else if (mahsulot === "lagmon") {
-            this.lagmon -= amount;
-        } else if(mahsulot === "cola") {
-            this.cola -= amount;
-        } else {
-            console.log(`Kechirasiz hurmatli mijoz bizda  ${mahsulot} mavjud emas`);
-        }
-    }
-    qabul(mahsulot, amount) {
-        if (mahsulot === "non") {
-            this.non += amount;
-        } else if (mahsulot === "lagmon") {
-            this.lagmon += amount;
-        } else if (mahsulot === "cola") {
-            this.cola += amount;
-        } else {
-            console.log(`${mahsulot} qabul qilinmaydi`);
-        }
-    }
-    qoldiq() {
-        const curTime = new Date();
-        const hours = curTime.getHours();
-        const minutes = curTime.getMinutes();
-        const now = `${hours}:${minutes}`;
-        console.log(`Hozir ${now} da ${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola mavjud`);
-    }
+    const sorted1 = word1.split('').sort().join('');
+    const sorted2 = word2.split('').sort().join('');
+    return sorted1 === sorted2;
 }
-const shop = new Shop(8, 7, 4) 
-shop.sotish("non", 4);
-shop.sotish("shashlik", 4);
-shop.qabul("lagmon",3);
-shop.qabul("Pepsi", 15);
-shop.qoldiq();
+const b = checkContent("Hello", "Hi");
+const a = checkContent("mit", "itm")
+console.log(a);
+console.log(b);
+// MI Task: TASK-C
+// class Shop {
+//     //Constructor
+//     constructor(nonMiqdori, lagmonMiqdori, colaMiqdori)  {
+//         this.non = nonMiqdori;
+//         this.lagmon = lagmonMiqdori;
+//         this.cola = colaMiqdori;
+//     }
+//     // Method
+//     sotish(mahsulot, amount) {
+//         if (mahsulot === "non") {
+//             this.non -= amount;
+//         } else if (mahsulot === "lagmon") {
+//             this.lagmon -= amount;
+//         } else if(mahsulot === "cola") {
+//             this.cola -= amount;
+//         } else {
+//             console.log(`Kechirasiz hurmatli mijoz bizda  ${mahsulot} mavjud emas`);
+//         }
+//     }
+//     qabul(mahsulot, amount) {
+//         if (mahsulot === "non") {
+//             this.non += amount;
+//         } else if (mahsulot === "lagmon") {
+//             this.lagmon += amount;
+//         } else if (mahsulot === "cola") {
+//             this.cola += amount;
+//         } else {
+//             console.log(`${mahsulot} qabul qilinmaydi`);
+//         }
+//     }
+//     qoldiq() {
+//         const curTime = new Date();
+//         const hours = curTime.getHours();
+//         const minutes = curTime.getMinutes();
+//         const now = `${hours}:${minutes}`;
+//         console.log(`Hozir ${now} da ${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola mavjud`);
+//     }
+// }
+// const shop = new Shop(8, 7, 4) 
+// shop.sotish("non", 4);
+// shop.sotish("shashlik", 4);
+// shop.qabul("lagmon",3);
+// shop.qabul("Pepsi", 15);
+// shop.qoldiq();
 
 
 // MI TASK: TASK-B
