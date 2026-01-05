@@ -1,19 +1,27 @@
-//MI TASK: TASK-D
-function checkContent(word1, word2) {
-    if (word1.length !== word2.length) {
-        return false;
-    }
-    const sorted1 = word1.split('').sort().join('');
-    const sorted2 = word2.split('').sort().join('');
-    return sorted1 === sorted2;
+// MI Task: TASK- E
+function getReverse (str) {
+    if (typeof str !== "string") 
+        return "Qiymat string bo'lishi kerak;"
+    return str.split('').reverse().join('')
 }
-const b = checkContent("Hello", "Hi");
-const a = checkContent("mit", "itm")
-console.log(a);
-console.log(b);
+const check = getReverse("Task id done"); 
+console.log(check);
+// //MI TASK: TASK-D
+// function checkContent(word1, word2) {
+//     if (word1.length !== word2.length) {
+//         return false;
+//     }
+//     const sorted1 = word1.split('').sort().join('');
+//     const sorted2 = word2.split('').sort().join('');
+//     return sorted1 === sorted2;
+// }
+// const b = checkContent("Hello", "Hi");
+// const a = checkContent("mit", "itm")
+// console.log(a);
+// console.log(b);
 // MI Task: TASK-C
 // class Shop {
-//     //Constructor
+//     //Constructor 
 //     constructor(nonMiqdori, lagmonMiqdori, colaMiqdori)  {
 //         this.non = nonMiqdori;
 //         this.lagmon = lagmonMiqdori;
