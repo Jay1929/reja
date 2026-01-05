@@ -4,7 +4,7 @@ function getReverse (str) {
         return "Qiymat string bo'lishi kerak;"
     return str.split('').reverse().join('')
 }
-const check = getReverse("Task id done"); 
+const check = getReverse("Task is done"); 
 console.log(check);
 // //MI TASK: TASK-D
 // function checkContent(word1, word2) {
