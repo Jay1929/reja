@@ -1,11 +1,25 @@
-// MI Task: TASK- E
-function getReverse (str) {
-    if (typeof str !== "string") 
-        return "Qiymat string bo'lishi kerak;"
-    return str.split('').reverse().join('')
+// MI Task: 
+// 
+function countDoubler(str) {
+    for(let i = 0; i < str.length; i++) {
+        for (let j = i+1; j < str.length; j++){
+            if (str[i] === str[j]) {
+                return true;
+            }
+        } 
+    }
+    return false;
 }
-const check = getReverse("Task is done"); 
-console.log(check);
+const result=countDoubler("findDoubles")
+console.log(result)
+// TASK- E
+// function getReverse (str) {
+//     if (typeof str !== "string") 
+//         return "Qiymat string bo'lishi kerak;"
+//     return str.split('').reverse().join('')
+// }
+// const check = getReverse("Task is done"); 
+// console.log(check);
 // //MI TASK: TASK-D
 // function checkContent(word1, word2) {
 //     if (word1.length !== word2.length) {
